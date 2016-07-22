@@ -1,1 +1,2 @@
 # courage
+Authors: Alanah
