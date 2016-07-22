@@ -1,2 +1,3 @@
 # courage
-Authors: Alanah
+Author: Alanah
+Author: Jacqui F
