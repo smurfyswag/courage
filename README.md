@@ -1,3 +1,3 @@
 # courage
 
-Author: Christina
+Authors: Alanah, Jacqui F, and Christina
