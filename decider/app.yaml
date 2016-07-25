@@ -5,9 +5,9 @@ api_version: 1
 threadsafe: no
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+- url: /icon-ux-blue\.png
+  static_files: templates/pictures/icon-ux-blue.png
+  upload: templates/pictures/icon-ux-blue\.png
 
 - url: /decider_style\.css
   static_files: templates/decider_style.css
@@ -16,6 +16,18 @@ handlers:
 - url: /chart\.js
   static_files: templates/chart.js
   upload: templates/chart\.js
+
+- url: /blank_page\.jpg
+  static_files: templates/pictures/blank_page.jpg
+  upload: templates/pictures/blank_page\.jpg
+
+- url: /college_pic\.jpg
+  static_files: templates/pictures/college_pic.jpg
+  upload: templates/pictures/college_pic\.jpg
+
+- url: /house\.jpg
+  static_files: templates/pictures/house.jpg
+  upload: templates/pictures/house\.jpg
 
 - url: .*
   script: main.app

@@ -77,15 +77,174 @@ def render_chart():
     template = jinja_environment.get_template('chart.html')
     return template.render({'chart':chart})
 
+def render_college_chart():
+    chart = ""
+    options = 5
+    factors = 11
+    for r in range (1,factors+2):
+        chart = chart + "<tr>"
+        for c in range (1,options+3):
+          if r==1 and c==1:
+              chart = chart + "<td class='row1 col1'>Factor</td>"
+          elif r==1 and c==2:
+              chart = chart + "<td class='row1 col2'>Weight of Factor</td>"
+          elif r==1:
+              if c%2==0:
+                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>College "+str(c-2)+"</textarea></td>"
+              else:
+                  chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>College "+str(c-2)+"</textarea></td>"
+          else:
+              if c==1:
+                  if r==2:
+                      chart = chart + "<td class='roweven col1'>Affordabilty</td>"
+                  elif r==3:
+                      chart = chart + "<td class='rowodd col1'>Size</td>"
+                  elif r==4:
+                      chart = chart + "<td class='roweven col1'>Location</td>"
+                  elif r==5:
+                      chart = chart + "<td class='rowodd col1'>Programs</td>"
+                  elif r==6:
+                      chart = chart + "<td class='roweven col1'>Extra-Curriculars</td>"
+                  elif r==7:
+                      chart = chart + "<td class='rowodd col1'>Residence-Life</td>"
+                  elif r==8:
+                      chart = chart + "<td class='roweven col1'>Campus-Life</td>"
+                  elif r==9:
+                      chart = chart + "<td class='rowodd col1'>Diversity</td>"
+                  elif r==10:
+                      chart = chart + "<td class='roweven col1'>Post-Grad Opprotunities</td>"
+                  elif r==11:
+                      chart = chart + "<td class='rowodd col1'>Food</td>"
+                  else:
+                      chart = chart+"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
+
+              elif c==2:
+                  if r%2==0:
+                      chart = chart + """<td class='roweven col2'>"""
+                  else:
+                      chart = chart + """<td class='rowodd col2'>"""
+                  chart = chart + """<select id="f"""+str(r-1)+"""weight" class="dropdown">
+                         <option value="1" selected>1</option>"""
+                  for v in range (2,11):
+                    chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                  chart = chart + """</select></td>"""
+              else:
+                   if r%2==0:
+                       if c%2==0:
+                           chart = chart + """<td class="roweven coleven">"""
+                       else:
+                         chart = chart + """<td class="roweven colodd">"""
+                   else:
+                        if c%2==0:
+                            chart = chart + """<td class="rowodd coleven">"""
+                        else:
+                            chart = chart + """<td class="rowodd colodd">"""
+                   chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
+                      <option value="0">Choose a Score</option>"""
+                   for v in range (1,11):
+                     chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                   chart = chart + """</select></td>"""
+        chart = chart + "</tr>"
+    template = jinja_environment.get_template('college.html')
+    return template.render({'chart':chart})
+
+def render_house_chart():
+    chart = ""
+    options = 5
+    factors = 8
+    for r in range (1,factors+2):
+        chart = chart + "<tr>"
+        for c in range (1,options+3):
+          if r==1 and c==1:
+              chart = chart + "<td class='row1 col1'>Factor</td>"
+          elif r==1 and c==2:
+              chart = chart + "<td class='row1 col2'>Weight of Factor</td>"
+          elif r==1:
+              if c%2==0:
+                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>House/Apt "+str(c-2)+"</textarea></td>"
+              else:
+                  chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>House/Apt "+str(c-2)+"</textarea></td>"
+          else:
+              if c==1:
+                  if r==2:
+                      chart = chart + "<td class='roweven col1'>Affordabilty</td>"
+                  elif r==3:
+                      chart = chart + "<td class='rowodd col1'>Location</td>"
+                  elif r==4:
+                      chart = chart + "<td class='roweven col1'>Size</td>"
+                  elif r==5:
+                      chart = chart + "<td class='rowodd col1'>Layout</td>"
+                  elif r==6:
+                      chart = chart + "<td class='roweven col1'>Safety</td>"
+                  elif r==7:
+                      chart = chart + "<td class='rowodd col1'>Yard</td>"
+                  elif r==8:
+                      chart = chart + "<td class='roweven col1'>School District</td>"
+                  else:
+                      chart = chart +"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
+
+              elif c==2:
+                  if r%2==0:
+                      chart = chart + """<td class='roweven col2'>"""
+                  else:
+                      chart = chart + """<td class='rowodd col2'>"""
+                  chart = chart + """<select id="f"""+str(r-1)+"""weight" class="dropdown">
+                         <option value="1" selected>1</option>"""
+                  for v in range (2,11):
+                    chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                  chart = chart + """</select></td>"""
+              else:
+                   if r%2==0:
+                       if c%2==0:
+                           chart = chart + """<td class="roweven coleven">"""
+                       else:
+                         chart = chart + """<td class="roweven colodd">"""
+                   else:
+                        if c%2==0:
+                            chart = chart + """<td class="rowodd coleven">"""
+                        else:
+                            chart = chart + """<td class="rowodd colodd">"""
+                   chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
+                      <option value="0">Choose a Score</option>"""
+                   for v in range (1,11):
+                     chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                   chart = chart + """</select></td>"""
+        chart = chart + "</tr>"
+    template = jinja_environment.get_template('house.html')
+    return template.render({'chart':chart})
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('index.html')
+        self.response.write(template.render({}))
 
 class BlankHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write(render_chart())
 
+class CollegeHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(render_college_chart())
+
+class HouseHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(render_house_chart())
+
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('about.html')
+        self.response.write(template.render({}))
+
+class HowToHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('how_to.html')
+        self.response.write(template.render({}))
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/generaldecision', BlankHandler),
+    ('/about',AboutHandler),
+    ('/college',CollegeHandler),
+    ('/house',HouseHandler),
+    ('/how-to',HowToHandler)
 ], debug=True)
