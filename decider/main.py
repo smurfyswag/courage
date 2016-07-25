@@ -80,7 +80,7 @@ def render_chart():
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
-
+logging.info("Hello. I am running")
 class BlankHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write(render_chart())

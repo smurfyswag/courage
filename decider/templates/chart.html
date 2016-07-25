@@ -2,15 +2,16 @@
 <head>
 <title>Title of Page</title>
 <link rel="stylesheet" type="text/css" href="decider_style.css">
-</head>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
 <body>
-<h1>THE NAME OF THE WEBSITE GOES HERE</h1>
+<h1>The Make-Up-Your-Mind Machine</h1>
 <br>
 <form>
 <textarea name="question" class="top">Big Question</textarea>
-</td>
+<input type="Button" id="newCol" class="button" value="Add Option">
+<input type="Button" id="newRow" class="button" value="Add Factor">
 <br>
-<table style="border:solid" class="chart">
+<table style="border:solid" id="myTable" class="chart">
 {{chart}}
 </table>
 <input type="Reset" class="button" value="Clear Table">

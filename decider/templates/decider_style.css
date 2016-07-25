@@ -4,6 +4,8 @@ td{
 table{
   width=100%;
 }
+textarea{
+}
 .col1{
   width: 200px;
 }
@@ -14,7 +16,7 @@ table{
 
 }
 .coleven{
-  
+
 }
 .row1{
   height:50px;
@@ -35,8 +37,11 @@ table{
 
 }
 .top{
-
+ font-family: "Quicksand", sans-serif;
 }
 .button{
 
+}
+h1{
+  
 }
