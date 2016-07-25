@@ -215,14 +215,9 @@ def render_house_chart():
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-<<<<<<< HEAD
         template = jinja_environment.get_template('index.html')
         self.response.write(template.render({}))
 
-=======
-        self.response.write('Hello world!')
-logging.info("Hello. I am running")
->>>>>>> 02dc71e38222ee27d4d4082594456f7d4201051f
 class BlankHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write(render_chart())
