@@ -54,4 +54,12 @@ function decide(){
   }
   $('#resultList').append(results)
 }
+function newColumn(){
+  $('#myTable tr').append('<td>new</td>')
+}
+function newRow(){
+  $('#myTable tr:last').after('<tr><td>HELLO</td></tr>');
+}
 $('#decide').on('click', decide);
+$('#newCol').on('click', newColumn);
+$('#newRow').on('click', newRow);
