@@ -1,0 +1,42 @@
+td{
+  border:solid;
+}
+table{
+  width=100%;
+}
+.col1{
+  width: 200px;
+}
+.col2{
+  width:100px;
+}
+.colodd{
+
+}
+.coleven{
+  
+}
+.row1{
+  height:50px;
+}
+.rowodd{
+
+}
+.roweven{
+
+}
+.option{
+
+}
+.factor{
+
+}
+.dropdown{
+
+}
+.top{
+
+}
+.button{
+
+}
