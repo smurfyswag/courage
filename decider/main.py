@@ -27,8 +27,8 @@ jinja_environment = jinja2.Environment(
 
 def render_chart():
     chart = ""
-    options = 5
-    factors = 10
+    options = 2
+    factors = 2
     for r in range (1,factors+2):
         chart = chart + "<tr>"
         for c in range (1,options+3):

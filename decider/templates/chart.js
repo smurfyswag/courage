@@ -10,7 +10,8 @@ function indexOfGreatest(array){
   return index;
 }
 function decide(){
-  var results = "RESULTS";
+  var results = "";
+  results = results + document.getElementById("question").value.toUpperCase();
   document.getElementById("resultList").innerHTML = "";
   var names = [];
   var i =1;
@@ -52,13 +53,106 @@ function decide(){
     names.splice(indexOfGreatest(scores),1);
     scores.splice(indexOfGreatest(scores),1);
   }
-  $('#resultList').append(results)
+  $('#resultList').append(results);
 }
 function newColumn(){
-  $('#myTable tr').append('<td>new</td>')
+  var rows = document.getElementById("myTable").rows.length;
+  var cols = document.getElementById("myTable").rows[0].cells.length;
+  var newStuff = "";
+  if (cols%2==0){
+    $('#myTable tr:eq(0)').append("<td class='row1 coleven'><textarea id='name"+(cols-1)+"' class='option'>Option "+(cols-1)+"</textarea></td>");
+    for (var i=1;i<rows;i++){
+      if (i%2==0){
+        newStuff=newStuff+"<td class='roweven coleven'>";
+      }
+      else{
+        newStuff=newStuff+"<td class='rowodd coleven'>";
+      }
+      newStuff=newStuff+"<select id='o"+(cols-1)+"f"+i+"' class='dropdown'><option value='0'>Choose a Score</option>";
+      for (var j=1;j<11;j++){
+        newStuff=newStuff+"<option value='"+j+"'>"+j+"</option>";
+      }
+      newStuff=newStuff+"</select></td>";
+      $('#myTable tr:eq('+i+')').append(newStuff);
+      newStuff="";
+    }
+  }
+  else{
+    $('#myTable tr:eq(0)').append("<td class='row1 colodd'><textarea id='name"+(cols-1)+"' class='option'>Option "+(cols-1)+"</textarea></td>");
+    for (i=1;i<rows;i++){
+      if (i%2==0){
+        newStuff=newStuff+"<td class='roweven colodd'>";
+      }
+      else{
+        newStuff=newStuff+"<td class='rowodd colodd'>";
+      }
+      newStuff=newStuff+"<select id='o"+(cols-1)+"f"+i+"' class='dropdown'><option value='0'>Choose a Score</option>";
+      for (j=1;j<11;j++){
+        newStuff=newStuff+"<option value='"+j+"'>"+j+"</option>";
+      }
+      newStuff=newStuff+"</select></td>";
+      $('#myTable tr:eq('+i+')').append(newStuff);
+      newStuff="";
+    }
+  }
 }
 function newRow(){
-  $('#myTable tr:last').after('<tr><td>HELLO</td></tr>');
+  var rows = document.getElementById("myTable").rows.length;
+  var cols = document.getElementById("myTable").rows[0].cells.length;
+  var newStuff = "";
+  if (rows%2==0){
+    newStuff = newStuff + "<td class='rowodd col1'><textarea class='factor'>Factor "+rows+"</textarea></td>";
+    newStuff = newStuff + "<td class='rowodd col2'><select id='f"+rows+"weight' class='dropdown'><option value='1' selected>1</option>";
+    for(var j=2;j<11;j++){
+      newStuff = newStuff + "<option value='"+j+"'>"+j+"</option>"
+    }
+    newStuff = newStuff + "</select></td>"
+    for (var i=2;i<cols;i++){
+      if (i%2==0){
+        newStuff=newStuff+"<td class='rowodd coleven'>";
+        newStuff=newStuff+"<select id='o"+(i-1)+"f"+rows+"' class='dropdown'><option value='0'>Choose a Score</option>";
+        for (k=1;k<11;k++){
+          newStuff=newStuff+"<option value='"+k+"'>"+k+"</option>";
+        }
+        newStuff=newStuff+"</select></td>";
+      }
+      else{
+        newStuff=newStuff+"<td class='rowodd colodd'>";
+        newStuff=newStuff+"<select id='o"+(i-1)+"f"+rows+"' class='dropdown'><option value='0'>Choose a Score</option>";
+        for (k=1;k<11;k++){
+          newStuff=newStuff+"<option value='"+k+"'>"+k+"</option>";
+        }
+        newStuff=newStuff+"</select></td>";
+      }
+    }
+  }
+  else{
+    newStuff = newStuff + "<td class='roweven col1'><textarea class='factor'>Factor "+rows+"</textarea></td>";
+    newStuff = newStuff + "<td class='roweven col2'><select id='f"+rows+"weight' class='dropdown'><option value='1' selected>1</option>";
+    for(var j=2;j<11;j++){
+      newStuff = newStuff + "<option value='"+j+"'>"+j+"</option>"
+    }
+    newStuff = newStuff + "</select></td>"
+    for (var i=2;i<cols;i++){
+      if (i%2==0){
+        newStuff=newStuff+"<td class='roweven coleven'>";
+        newStuff=newStuff+"<select id='o"+(i-1)+"f"+rows+"' class='dropdown'><option value='0'>Choose a Score</option>";
+        for (k=1;k<11;k++){
+          newStuff=newStuff+"<option value='"+k+"'>"+k+"</option>";
+        }
+        newStuff=newStuff+"</select></td>";
+      }
+      else{
+        newStuff=newStuff+"<td class='roweven colodd'>";
+        newStuff=newStuff+"<select id='o"+(i-1)+"f"+rows+"' class='dropdown'><option value='0'>Choose a Score</option>";
+        for (k=1;k<11;k++){
+          newStuff=newStuff+"<option value='"+k+"'>"+k+"</option>";
+        }
+        newStuff=newStuff+"</select></td>";
+      }
+    }
+  }
+  $('#myTable tr:last').after("<tr>"+newStuff+"</tr>");
 }
 $('#decide').on('click', decide);
 $('#newCol').on('click', newColumn);
