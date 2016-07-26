@@ -154,6 +154,20 @@ function newRow(){
   }
   $('#myTable tr:last').after("<tr>"+newStuff+"</tr>");
 }
+function deleteColumn(){
+  var cols = document.getElementById("myTable").rows[0].cells.length;
+  if (cols>3){
+    $('#myTable').find('tr').find('td:last').remove();
+  }
+}
+function deleteRow(){
+  var rows = document.getElementById("myTable").rows.length;
+  if (rows>2){
+    $('#myTable tr:last').remove();
+  }
+}
 $('#decide').on('click', decide);
 $('#newCol').on('click', newColumn);
 $('#newRow').on('click', newRow);
+$('#deleteCol').on('click', deleteColumn);
+$('#deleteRow').on('click', deleteRow);
