@@ -29,6 +29,10 @@ handlers:
   static_files: templates/pictures/house.jpg
   upload: templates/pictures/house\.jpg
 
+- url: /junk-food\.jpg
+  static_files: templates/pictures/junk-food.jpg
+  upload: templates/pictures/junk-food\.jpg
+
 - url: .*
   script: main.app
 

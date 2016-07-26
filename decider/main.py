@@ -181,7 +181,7 @@ def render_house_chart():
                   elif r==8:
                       chart = chart + "<td class='roweven col1 factor'>School District</td>"
                   else:
-                      chart = chart +"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
+                      chart = chart +"<td class='rowodd col1'><textarea class='factor'>Other Factor</textarea></td>"
 
               elif c==2:
                   if r%2==0:
@@ -213,6 +213,65 @@ def render_house_chart():
     template = jinja_environment.get_template('house.html')
     return template.render({'chart':chart})
 
+def render_dinner_chart():
+    chart = ""
+    options = 3
+    factors = 5
+    for r in range (1,factors+2):
+        chart = chart + "<tr>"
+        for c in range (1,options+3):
+          if r==1 and c==1:
+              chart = chart + "<td class='row1 col1'>Factor</td>"
+          elif r==1 and c==2:
+              chart = chart + "<td class='row1 col2'>Weight of Factor</td>"
+          elif r==1:
+              if c%2==0:
+                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>Restaurant "+str(c-2)+"</textarea></td>"
+              else:
+                  chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>Restaurant "+str(c-2)+"</textarea></td>"
+          else:
+              if c==1:
+                  if r==2:
+                      chart = chart + "<td class='roweven col1 factor'>Affordabilty</td>"
+                  elif r==3:
+                      chart = chart + "<td class='rowodd col1 factor'>Food Quality</td>"
+                  elif r==4:
+                      chart = chart + "<td class='roweven col1 factor'>Location</td>"
+                  elif r==5:
+                      chart = chart + "<td class='rowodd col1 factor'>Service</td>"
+                  else:
+                      chart = chart +"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
+
+              elif c==2:
+                  if r%2==0:
+                      chart = chart + """<td class='roweven col2'>"""
+                  else:
+                      chart = chart + """<td class='rowodd col2'>"""
+                  chart = chart + """<select id="f"""+str(r-1)+"""weight" class="dropdown">
+                         <option value="1" selected>1</option>"""
+                  for v in range (2,11):
+                    chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                  chart = chart + """</select></td>"""
+              else:
+                   if r%2==0:
+                       if c%2==0:
+                           chart = chart + """<td class="roweven coleven">"""
+                       else:
+                         chart = chart + """<td class="roweven colodd">"""
+                   else:
+                        if c%2==0:
+                            chart = chart + """<td class="rowodd coleven">"""
+                        else:
+                            chart = chart + """<td class="rowodd colodd">"""
+                   chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
+                      <option value="0">Choose a Score</option>"""
+                   for v in range (1,11):
+                     chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
+                   chart = chart + """</select></td>"""
+        chart = chart + "</tr>"
+    template = jinja_environment.get_template('dinner.html')
+    return template.render({'chart':chart})
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('index.html')
@@ -240,11 +299,16 @@ class HowToHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('how_to.html')
         self.response.write(template.render({}))
 
+class DinnerHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(render_dinner_chart())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/generaldecision', BlankHandler),
     ('/about',AboutHandler),
     ('/college',CollegeHandler),
     ('/house',HouseHandler),
-    ('/how-to',HowToHandler)
+    ('/how-to',HowToHandler),
+    ('/dinner',DinnerHandler)
 ], debug=True)
