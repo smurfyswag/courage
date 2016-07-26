@@ -150,7 +150,7 @@ def render_college_chart():
 
 def render_house_chart():
     chart = ""
-    options = 5
+    options = 3
     factors = 8
     for r in range (1,factors+2):
         chart = chart + "<tr>"

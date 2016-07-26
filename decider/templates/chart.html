@@ -15,11 +15,12 @@
 <body>
 <h1>The Make-Up-Your-Mind Machine</h1>
 <br>
+<div id="printable">
 <form>
 <textarea id="question" class="top">Big Question</textarea><br>
 <input type="Button" id="newCol" class="button" value="Add Option">
-<input type="Button" id="newRow" class="button" value="Add Factor">
 <input type="Button" id="deleteCol" class="button" value="Remove Option">
+<input type="Button" id="newRow" class="button" value="Add Factor">
 <input type="Button" id="deleteRow" class="button" value="Remove Factor">
 <br>
 <table id="myTable" class="chart">
@@ -30,6 +31,7 @@
 </form>
 <div id="results">
 <p id="resultList"> </p>
+</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="chart.js"></script>

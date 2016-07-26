@@ -14,13 +14,19 @@
 </head>
 <body>
 <h1>Decider 5000</h1>
+<form>
 <br>
 <p class="top">What home/apartment will you choose?</p>
 <br>
+<input type="Button" id="newHouse" class="button" value="Add House/Apt">
+<input type="Button" id="deleteCol" class="button" value="Remove House/Apt">
+<input type="Button" id="newOther" class="button" value="Add Factor">
+<input type="Button" id="deleteRow" class="button" value="Remove Factor">
 <table id = "myTable" class="chart">
 {{chart}}
 </table>
 <input type="Reset" class="button" value="Clear Table">
+
 <input type="Button" id="decide" class="button" value="Decide">
 </form>
 <div id="results">
