@@ -96,25 +96,25 @@ def render_college_chart():
           else:
               if c==1:
                   if r==2:
-                      chart = chart + "<td class='roweven col1'>Affordabilty</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Affordabilty</td>"
                   elif r==3:
-                      chart = chart + "<td class='rowodd col1'>Size</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Size</td>"
                   elif r==4:
-                      chart = chart + "<td class='roweven col1'>Location</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Location</td>"
                   elif r==5:
-                      chart = chart + "<td class='rowodd col1'>Programs</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Programs</td>"
                   elif r==6:
-                      chart = chart + "<td class='roweven col1'>Extra-Curriculars</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Extra-Curriculars</td>"
                   elif r==7:
-                      chart = chart + "<td class='rowodd col1'>Residence-Life</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Residence-Life</td>"
                   elif r==8:
-                      chart = chart + "<td class='roweven col1'>Campus-Life</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Campus-Life</td>"
                   elif r==9:
-                      chart = chart + "<td class='rowodd col1'>Diversity</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Diversity</td>"
                   elif r==10:
-                      chart = chart + "<td class='roweven col1'>Post-Grad Opprotunities</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Post-Grad Opprotunities</td>"
                   elif r==11:
-                      chart = chart + "<td class='rowodd col1'>Food</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Food</td>"
                   else:
                       chart = chart+"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
 
@@ -167,19 +167,19 @@ def render_house_chart():
           else:
               if c==1:
                   if r==2:
-                      chart = chart + "<td class='roweven col1'>Affordabilty</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Affordabilty</td>"
                   elif r==3:
-                      chart = chart + "<td class='rowodd col1'>Location</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Location</td>"
                   elif r==4:
-                      chart = chart + "<td class='roweven col1'>Size</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Size</td>"
                   elif r==5:
-                      chart = chart + "<td class='rowodd col1'>Layout</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Layout</td>"
                   elif r==6:
-                      chart = chart + "<td class='roweven col1'>Safety</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Safety</td>"
                   elif r==7:
-                      chart = chart + "<td class='rowodd col1'>Yard</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Yard</td>"
                   elif r==8:
-                      chart = chart + "<td class='roweven col1'>School District</td>"
+                      chart = chart + "<td class='roweven col1 factor'>School District</td>"
                   else:
                       chart = chart +"<td class='roweven col1'><textarea class='factor'>Other Factor</textarea></td>"
 
