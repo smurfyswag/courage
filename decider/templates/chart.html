@@ -3,7 +3,6 @@
   <title>Decision Maker</title>
   <link rel="stylesheet" type="text/css" href="decider_style.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
-  <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/medium.css' />
   <link rel="icon"
       type="image/png"
       href="icon-ux-blue.png">
@@ -34,22 +33,26 @@
 
   </h2>
 
-  <div class="white"></div>
+<div class="white"></div>
 <h1>The Make-Up-Your-Mind Machine</h1>
 <br>
 <div id="printable">
 <form>
 <textarea id="question" class="top">Big Question</textarea><br>
+<div class="button_center">
 <input type="Button" id="newCol" class="button" value="Add Option">
 <input type="Button" id="deleteCol" class="button" value="Remove Option">
 <input type="Button" id="newRow" class="button" value="Add Factor">
 <input type="Button" id="deleteRow" class="button" value="Remove Factor">
+<input type="Reset" class="button" value="Clear Table">
+</div>
 <br>
-<table id="myTable" class="chart">
+<table id="myTable" class="chart" cellspacing='0'>
 {{chart}}
 </table>
-<input type="Reset" class="button" value="Clear Table">
+<div class="button_center">
 <input type="Button" id="decide" class="button" value="Decide">
+</div>
 </form>
 <div id="results">
 <p id="resultList"> </p>

@@ -38,7 +38,7 @@ def render_chart():
               chart = chart + "<td class='row1 col2'>Weight of Factor</td>"
           elif r==1:
               if c%2==0:
-                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>Option "+str(c-2)+"</textarea></td>"
+                  chart = chart + "<td class='row1 coleven'><textarea align='bottom' id='name"+str(c-2)+"' class='option'>Option "+str(c-2)+"</textarea></td>"
               else:
                   chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>Option "+str(c-2)+"</textarea></td>"
           else:
@@ -69,7 +69,7 @@ def render_chart():
                         else:
                             chart = chart + """<td class="rowodd colodd">"""
                    chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
-                      <option value="0">Choose a Score</option>"""
+                      <option value="0">Score</option>"""
                    for v in range (1,11):
                      chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
                    chart = chart + """</select></td>"""
@@ -140,7 +140,7 @@ def render_college_chart():
                         else:
                             chart = chart + """<td class="rowodd colodd">"""
                    chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
-                      <option value="0">Choose a Score</option>"""
+                      <option value="0">Score</option>"""
                    for v in range (1,11):
                      chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
                    chart = chart + """</select></td>"""
@@ -205,7 +205,7 @@ def render_house_chart():
                         else:
                             chart = chart + """<td class="rowodd colodd">"""
                    chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
-                      <option value="0">Choose a Score</option>"""
+                      <option value="0">Score</option>"""
                    for v in range (1,11):
                      chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
                    chart = chart + """</select></td>"""
@@ -264,7 +264,7 @@ def render_dinner_chart():
                         else:
                             chart = chart + """<td class="rowodd colodd">"""
                    chart = chart + """<select id='o"""+str(c-2)+"""f"""+str(r-1)+"""' class="dropdown">
-                      <option value="0">Choose a Score</option>"""
+                      <option value="0">Score</option>"""
                    for v in range (1,11):
                      chart = chart + "<option value='"+str(v)+"'>"+str(v)+"</option>"
                    chart = chart + """</select></td>"""
