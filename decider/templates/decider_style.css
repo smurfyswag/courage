@@ -25,6 +25,24 @@ html {
   margin-right: auto;
 }
 
+.page-words {
+  width: 79%;
+  top: 30%;
+  bottom: 70px;
+  left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18pt;
+  border-style: dashed;
+  padding-bottom: 70px;
+}
+
+  .page-words > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 .navigation {
   height: 50px;
   background-color: #006B89;
@@ -73,7 +91,7 @@ html {
         color: #88CAEA;
     } */
 
-      .dropdown {
+      .navdropdown {
         display: none;
         position: absolute;
         background-color: #4A96AD;
@@ -86,14 +104,14 @@ html {
         text-decoration: none;
       }
 
-      .navigation li:hover .dropdown {
+      .navigation li:hover .navdropdown {
         display: block;
         width: inherit;
         color: white;
         text-decoration: none;
       }
 
-      .navigation li:hover .dropdown li:hover{
+      .navigation li:hover .navdropdown li:hover{
         background-color:#8E84D6;
       }
 
@@ -117,13 +135,13 @@ html {
         color: white;
       }
 
-      .dropdown:hover .dropdown-content {
+      .navdropdown:hover .dropdown-content {
           display: block;
           text-decoration: none;
           color: white;
       }
 
-      .dropdown:hover .menu-item {
+      .navdropdown:hover .menu-item {
           display: block;
       }
 
@@ -133,8 +151,7 @@ html {
         color: #88CAEA;
     } NEED TO FIX THIS - Christina */
 
-
-h1{
+h1 {
   text-align: center;
   font-size: 100px;
   color: #003D4E;
@@ -145,6 +162,12 @@ h1{
   padding-top: 20px;
   font-family: Quicksand;
 }
+
+h3 {
+  color: #0C0257;
+  font-weight: bolder;
+}
+
 .flex-container {
   width: 100%;
   align-content: space-between;
@@ -161,6 +184,7 @@ h1{
   margin-left: auto;
   margin-right: auto;
 }
+<<<<<<< HEAD
   .imgtext {
     position: absolute;
     margin: 0px;
@@ -193,6 +217,9 @@ h1{
   border-color: #EB376D;
   border-radius: 50%
 }
+=======
+
+>>>>>>> 9f566540f3e93753ac28f19e70f0ab3872aae615
   .flex-item {
     width: 230px;  /* Or whatever */
     height: 230px; /* Or whatever */
@@ -205,11 +232,15 @@ h1{
     flex-flow: wrap;
     justify-content: space-around;
   }
+<<<<<<< HEAD
   .imghover:hover .imgtext{
 
     visibility: visible;
     opacity: 1;
   }
+=======
+
+>>>>>>> 9f566540f3e93753ac28f19e70f0ab3872aae615
 .tagline {
   color: #003D4E;
   text-align: center;
@@ -232,10 +263,19 @@ footer {
 td{
 }
 table{
-  width=100%;
+
 }
 textarea{
 } /* size of text box, and making backgrounds different colors, and changing the font but NOT font size */
+form{
+  float:right;
+  margin-right: 7.5%;
+  display: block;
+  alignment: center;
+  align-self: center;
+  border: solid;
+  width: 85%;
+}
 .col1{
   width: 200px;
 }
@@ -267,6 +307,8 @@ textarea{
 
 }
 .top{
+ width: 100%;
+ text-align: center;
  font-family: "Quicksand", sans-serif;
 }
 .button{

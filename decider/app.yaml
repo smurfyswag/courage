@@ -43,6 +43,10 @@ handlers:
 #  static_files: templates/pictures/junk-food.jpg
 #  upload: templates/pictures/junk-food\.jpg
 
+- url: /chart\.js
+  static_files: templates/chart.js
+  upload: templates/chart\.js
+
 - url: .*
   script: main.app
 
