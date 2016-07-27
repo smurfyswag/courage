@@ -305,7 +305,7 @@ class DinnerHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/generaldecision', BlankHandler),
+    ('/general', BlankHandler),
     ('/about',AboutHandler),
     ('/college',CollegeHandler),
     ('/house',HouseHandler),
