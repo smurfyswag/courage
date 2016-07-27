@@ -5,9 +5,9 @@ api_version: 1
 threadsafe: no
 
 handlers:
-- url: /icon-ux-blue\.png
-  static_files: templates/pictures/icon-ux-blue.png
-  upload: templates/pictures/icon-ux-blue\.png
+#- url: /icon-ux-blue\.png
+#  static_files: templates/pictures/icon-ux-blue.png
+#  upload: templates/pictures/icon-ux-blue\.png
 
 - url: /decider_style\.css
   static_files: templates/decider_style.css
@@ -17,25 +17,31 @@ handlers:
   static_files: templates/chart.js
   upload: templates/chart\.js
 
-- url: /blank_page\.jpg
-  static_files: templates/pictures/blank_page.jpg
-  upload: templates/pictures/blank_page\.jpg
 
-- url: /college_pic\.jpg
-  static_files: templates/pictures/college_pic.jpg
-  upload: templates/pictures/college_pic\.jpg
+- url: /(.*\.(png|jpg))
+  static_files: templates/pictures/\1
+  upload: templates/pictures/.*\.(png|jpg)
 
-- url: /house\.jpg
-  static_files: templates/pictures/house.jpg
-  upload: templates/pictures/house\.jpg
 
-- url: /download\.png
-  static_files: templates/pictures/download.png
-  upload: templates/pictures/download\.png
+#- url: /blank_page\.jpg
+#  static_files: templates/pictures/blank_page.jpg
+#  upload: templates/pictures/blank_page\.jpg
 
-- url: /junk-food\.jpg
-  static_files: templates/pictures/junk-food.jpg
-  upload: templates/pictures/junk-food\.jpg
+#- url: /college_pic\.jpg
+#  static_files: templates/pictures/college_pic.jpg
+#  upload: templates/pictures/college_pic\.jpg
+
+#- url: /house\.jpg
+#  static_files: templates/pictures/house.jpg
+#  upload: templates/pictures/house\.jpg
+
+#- url: /download\.png
+#  static_files: templates/pictures/download.png
+#  upload: templates/pictures/download\.png
+
+#- url: /junk-food\.jpg
+#  static_files: templates/pictures/junk-food.jpg
+#  upload: templates/pictures/junk-food\.jpg
 
 - url: .*
   script: main.app
