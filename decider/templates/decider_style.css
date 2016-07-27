@@ -183,7 +183,43 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+  .imgtext {
+    position: absolute;
+    margin: 0px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    text-align: center;
+    line-height: 250px;
+    /*padding-top: 100px;*/
+    border-radius: 50%;
+    background: linear-gradient(to bottom,#EB376D, #FF00FF,#FF66FF,#FF00FF,#EB376D);
+    color: white;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-flow: wrap;
+    visibility: hidden;
+    justify-content: space-around;
+    opacity: 0;
+}
+.imghover {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  justify-content: space-around;
+  display: flex;
+  flex-flow:wrap;
+  border:2px;
+  border-color: #EB376D;
+  border-radius: 50%
+}
+.imghover:hover .imgtext{
 
+  visibility: visible;
+  opacity: 1;
+}
   .flex-item {
     width: 230px;  /* Or whatever */
     height: 230px; /* Or whatever */
@@ -196,7 +232,6 @@ h3 {
     flex-flow: wrap;
     justify-content: space-around;
   }
-
 .tagline {
   color: #003D4E;
   text-align: center;
