@@ -248,7 +248,7 @@ function newHouse(){
     }
   }
 }
-function newHouse(){
+function newFood(){
   var rows = document.getElementById("myTable").rows.length;
   var cols = document.getElementById("myTable").rows[0].cells.length;
   var newStuff = "";
