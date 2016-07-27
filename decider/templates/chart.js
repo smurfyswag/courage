@@ -38,6 +38,9 @@ function decide(){
     values.push(localValues);
     o++;
     f = 1;
+    $('html, body').animate({
+      scrollTop: $("#resultList").offset().top
+   }, 1000);
   }
   var scores = [];
   var singlescore=0;
