@@ -258,6 +258,7 @@ td{
 table{
   text-align: center;
   clear:both;
+  margin-bottom: 20px;
 }
 textarea{
     outline: 0;
@@ -270,6 +271,7 @@ textarea{
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+    font-style: italic;
 } /* size of text box, and making backgrounds different colors, and changing the font but NOT font size */
 #printable{
   float:right;
@@ -354,9 +356,10 @@ tr {
  text-align: center;
  font-family: "Quicksand", sans-serif;
  color: #003D4E;
- font-size: 40px;
- height: 50px;
+ font-size: 60px;
+ height: 80px;
  margin-bottom: 15px;
+ margin-top: 50px;
 }
 .button{
     background-color: #EB376D;
