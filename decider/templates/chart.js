@@ -296,7 +296,7 @@ function newOtherFactor(){
   var rows = document.getElementById("myTable").rows.length;
   var cols = document.getElementById("myTable").rows[0].cells.length;
   var newStuff = "";
-  if (rows%2==1){
+  if (rows%2==0){
     newStuff = newStuff + "<td class='rowodd col1'><textarea class='factor'>Other Factor</textarea></td>";
     newStuff = newStuff + "<td class='rowodd col2'><select id='f"+rows+"weight' class='dropdown'><option value='1' selected>1</option>";
     for(var j=2;j<11;j++){
