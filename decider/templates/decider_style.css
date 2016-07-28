@@ -395,7 +395,7 @@ tr {
 #newCol, #newRestaurant, #newHouse, #newSchool{
   background-color: #006B89;
 }
-#newRow{
+#newRow, #newOther{
   background-color: #8E84D6;
 }
 #deleteCol{

@@ -11,7 +11,13 @@ function indexOfGreatest(array){
 }
 function decide(){
   var results = "";
-  results = results + document.getElementById("question").value.toUpperCase();
+  var element = document.getElementById("question");
+  if (element.tagName == 'TEXTAREA'){
+    results = results + document.getElementById("question").value.toUpperCase();
+  }
+  else{
+    results = results + document.getElementById("question").textContent.toUpperCase();
+  }
   document.getElementById("resultList").innerHTML = "";
   var names = [];
   var i =1;
