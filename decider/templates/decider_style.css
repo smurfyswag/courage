@@ -80,6 +80,9 @@ html {
     vertical-align: middle;
     text-decoration: none;
     background-color: #4A96AD;
+    text-overflow: ellipsis;
+    white-space: pre;
+    overflow: hidden;
     color: white;
     font-size: 16pt;
     font-family: Quicksand;
@@ -244,13 +247,17 @@ h3 {
   color: #003D4E;
   text-align: center;
   clear: both;
-  width: 100%;
+  width: 85%;
+  margin-left: 7.5%;
   padding-bottom: 110px;
   font-size: 36px;
   padding-top: 50px;
   }
 .how-to{
   margin: 12px 0;
+}
+option{
+  color: #003D4E;
 }
 footer {
   position: fixed;
@@ -293,7 +300,8 @@ textarea{
   text-align: center;
   border: none;
   width: 80%;
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
+  padding-bottom: 100px;
 }
 .col1{
   background-color: #003D4E;
@@ -371,7 +379,7 @@ tr {
  color: #003D4E;
  font-size: 60px;
  margin-bottom: 15px;
- margin-top: 50px;
+ margin-top: 55px;
 }
 .button{
     background-color: #EB376D;

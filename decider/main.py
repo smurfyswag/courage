@@ -106,13 +106,13 @@ def render_college_chart():
                   elif r==6:
                       chart = chart + "<td class='roweven col1 factor'>Extra-Curriculars</td>"
                   elif r==7:
-                      chart = chart + "<td class='rowodd col1 factor'>Residence-Life</td>"
+                      chart = chart + "<td class='rowodd col1 factor'>Residence Life</td>"
                   elif r==8:
-                      chart = chart + "<td class='roweven col1 factor'>Campus-Life</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Campus Life</td>"
                   elif r==9:
                       chart = chart + "<td class='rowodd col1 factor'>Diversity</td>"
                   elif r==10:
-                      chart = chart + "<td class='roweven col1 factor'>Post-Grad Opprotunities</td>"
+                      chart = chart + "<td class='roweven col1 factor'>Post-Grad Opportunities</td>"
                   elif r==11:
                       chart = chart + "<td class='rowodd col1 factor'>Food</td>"
                   else:
