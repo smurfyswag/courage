@@ -376,3 +376,10 @@ $(document).ready(function(){
   $('textarea').on('input', function(){center_text(this)});
  }
 )*/
+/*$('textarea').on('input', function(){
+  $(this).css({
+    opacity:1,
+    font-style:normal,
+    font-size:100;
+})
+});*/

@@ -160,6 +160,8 @@ h1 {
   margin-top: 90px;
   padding-top: 20px;
   font-family: Quicksand;
+  width:85%;
+  margin-left: 7.5%;
 }
 
 h3 {
@@ -331,6 +333,8 @@ tr {
 
 .roweven{
   background-color: #8E84D6;
+  max-height: 48px;
+  min-height: 48px;
 }
 .option{
   padding-top: 7px;
@@ -357,7 +361,6 @@ tr {
  font-family: "Quicksand", sans-serif;
  color: #003D4E;
  font-size: 60px;
- height: 80px;
  margin-bottom: 15px;
  margin-top: 50px;
 }
@@ -385,7 +388,7 @@ tr {
   width: 100px;
   font-size: 20px;
 }
-#newCol, #newFood, #newHouse, #newSchool{
+#newCol, #newRestaurant, #newHouse, #newSchool{
   background-color: #006B89;
 }
 #newRow{
