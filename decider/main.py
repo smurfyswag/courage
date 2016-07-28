@@ -80,7 +80,7 @@ def render_chart():
 def render_college_chart():
     chart = ""
     options = 5
-    factors = 11
+    factors = 10
     for r in range (1,factors+2):
         chart = chart + "<tr>"
         for c in range (1,options+3):
@@ -151,7 +151,7 @@ def render_college_chart():
 def render_house_chart():
     chart = ""
     options = 3
-    factors = 8
+    factors = 7
     for r in range (1,factors+2):
         chart = chart + "<tr>"
         for c in range (1,options+3):
@@ -161,9 +161,9 @@ def render_house_chart():
               chart = chart + "<td class='row1 col2'>Weight of Factor</td>"
           elif r==1:
               if c%2==0:
-                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>House/Apt "+str(c-2)+"</textarea></td>"
+                  chart = chart + "<td class='row1 coleven'><textarea id='name"+str(c-2)+"' class='option'>Home "+str(c-2)+"</textarea></td>"
               else:
-                  chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>House/Apt "+str(c-2)+"</textarea></td>"
+                  chart = chart + "<td class='row1 colodd'><textarea id='name"+str(c-2)+"' class='option'>Home "+str(c-2)+"</textarea></td>"
           else:
               if c==1:
                   if r==2:
@@ -216,7 +216,7 @@ def render_house_chart():
 def render_dinner_chart():
     chart = ""
     options = 3
-    factors = 5
+    factors = 4
     for r in range (1,factors+2):
         chart = chart + "<tr>"
         for c in range (1,options+3):

@@ -160,6 +160,8 @@ h1 {
   margin-top: 90px;
   padding-top: 20px;
   font-family: Quicksand;
+  width:85%;
+  margin-left: 7.5%;
 }
 
 h3 {
@@ -198,7 +200,7 @@ h3 {
     font-size: 12pt;
     font-weight: 900;
     font-style: oblique;
-    padding: 10px;
+    /* padding: 10px; */
     white-space: normal;
     height: 250px;
     width: 250px;
@@ -261,6 +263,7 @@ td{
 table{
   text-align: center;
   clear:both;
+  margin-bottom: 20px;
 }
 textarea{
     outline: 0;
@@ -273,6 +276,7 @@ textarea{
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+    font-style: italic;
 } /* size of text box, and making backgrounds different colors, and changing the font but NOT font size */
 #printable{
   float:right;
@@ -332,6 +336,8 @@ tr {
 
 .roweven{
   background-color: #8E84D6;
+  max-height: 48px;
+  min-height: 48px;
 }
 .option{
   padding-top: 7px;
@@ -357,8 +363,9 @@ tr {
  text-align: center;
  font-family: "Quicksand", sans-serif;
  color: #003D4E;
- font-size: 40px;
- height: 50px;
+ font-size: 60px;
+ margin-bottom: 15px;
+ margin-top: 50px;
 }
 .button{
     background-color: #EB376D;
@@ -384,7 +391,7 @@ tr {
   width: 100px;
   font-size: 20px;
 }
-#newCol, #newFood, #newHouse, #newSchool{
+#newCol, #newRestaurant, #newHouse, #newSchool{
   background-color: #006B89;
 }
 #newRow{

@@ -38,6 +38,9 @@ function decide(){
     values.push(localValues);
     o++;
     f = 1;
+    $('html, body').animate({
+      scrollTop: $("#resultList").offset().top
+   }, 1000);
   }
   var scores = [];
   var singlescore=0;
@@ -212,7 +215,7 @@ function newHouse(){
   var cols = document.getElementById("myTable").rows[0].cells.length;
   var newStuff = "";
   if (cols%2==1){
-    $('#myTable tr:eq(0)').append("<td class='row1 coleven'><textarea id='name"+(cols-1)+"' class='option'>House/Apt "+(cols-1)+"</textarea></td>");
+    $('#myTable tr:eq(0)').append("<td class='row1 coleven'><textarea id='name"+(cols-1)+"' class='option'>Home "+(cols-1)+"</textarea></td>");
     for (var i=1;i<rows;i++){
       if (i%2==1){
         newStuff=newStuff+"<td class='roweven coleven'>";
@@ -230,7 +233,7 @@ function newHouse(){
     }
   }
   else{
-    $('#myTable tr:eq(0)').append("<td class='row1 colodd'><textarea id='name"+(cols-1)+"' class='option'>House/Apt "+(cols-1)+"</textarea></td>");
+    $('#myTable tr:eq(0)').append("<td class='row1 colodd'><textarea id='name"+(cols-1)+"' class='option'>Home "+(cols-1)+"</textarea></td>");
     for (i=1;i<rows;i++){
       if (i%2==1){
         newStuff=newStuff+"<td class='roweven colodd'>";
@@ -373,3 +376,10 @@ $(document).ready(function(){
   $('textarea').on('input', function(){center_text(this)});
  }
 )*/
+/*$('textarea').on('input', function(){
+  $(this).css({
+    opacity:1,
+    font-style:normal,
+    font-size:100;
+})
+});*/
