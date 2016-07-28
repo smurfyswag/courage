@@ -249,6 +249,9 @@ h3 {
   font-size: 36px;
   padding-top: 50px;
   }
+.how-to{
+  margin: 12px 0;
+}
 footer {
   position: fixed;
   right: 0;
@@ -408,4 +411,5 @@ tr {
 }
 #resultList{
   font-size: 40px;
+  color: #003D4E;
 }

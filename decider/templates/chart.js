@@ -44,9 +44,6 @@ function decide(){
     values.push(localValues);
     o++;
     f = 1;
-    $('html, body').animate({
-      scrollTop: $("#resultList").offset().top
-   }, 1000);
   }
   var scores = [];
   var singlescore=0;
@@ -63,6 +60,9 @@ function decide(){
     scores.splice(indexOfGreatest(scores),1);
   }
   $('#resultList').append(results);
+  $('html, body').animate({
+    scrollTop: $("#resultList").offset().top
+ }, 1000);
 }
 function newColumn(){
   var rows = document.getElementById("myTable").rows.length;
